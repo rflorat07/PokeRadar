@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2553F80D21822FB1FA4B74AE /* Pods_PokeRadar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EA39738E27DA4079447A6E /* Pods_PokeRadar.framework */; };
+		4F60AF5F2029F4B100074CAF /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60AF5E2029F4B100074CAF /* Pokemon.swift */; };
+		4F60AF612029F90E00074CAF /* PokemonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60AF602029F90E00074CAF /* PokemonFactory.swift */; };
+		4F60AF63202A015800074CAF /* PokemonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60AF62202A015800074CAF /* PokemonAnnotation.swift */; };
 		4F65FEDF2028A699004F8093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65FEDE2028A699004F8093 /* AppDelegate.swift */; };
 		4F65FEE12028A699004F8093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65FEE02028A699004F8093 /* ViewController.swift */; };
 		4F65FEE42028A699004F8093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65FEE22028A699004F8093 /* Main.storyboard */; };
 		4F65FEE62028A699004F8093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F65FEE52028A699004F8093 /* Assets.xcassets */; };
 		4F65FEE92028A699004F8093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65FEE72028A699004F8093 /* LaunchScreen.storyboard */; };
-		4F65FEF12028A72A004F8093 /* 107-02-pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4F65FEF02028A72A004F8093 /* 107-02-pokemon.csv */; };
+		4F65FEF12028A72A004F8093 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4F65FEF02028A72A004F8093 /* pokemon.csv */; };
 		4F65FEF32028AD6E004F8093 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F65FEF22028AD6D004F8093 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F60AF5E2029F4B100074CAF /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		4F60AF602029F90E00074CAF /* PokemonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFactory.swift; sourceTree = "<group>"; };
+		4F60AF62202A015800074CAF /* PokemonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAnnotation.swift; sourceTree = "<group>"; };
 		4F65FEDB2028A699004F8093 /* PokeRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F65FEDE2028A699004F8093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F65FEE02028A699004F8093 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +31,7 @@
 		4F65FEE52028A699004F8093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F65FEE82028A699004F8093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F65FEEA2028A699004F8093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F65FEF02028A72A004F8093 /* 107-02-pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "107-02-pokemon.csv"; sourceTree = "<group>"; };
+		4F65FEF02028A72A004F8093 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		4F65FEF22028AD6D004F8093 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84F2B44C9DDDD4483B78B6DF /* Pods-PokeRadar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadar.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar.release.xcconfig"; sourceTree = "<group>"; };
 		A4EA39738E27DA4079447A6E /* Pods_PokeRadar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeRadar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +88,7 @@
 		4F65FEDD2028A699004F8093 /* PokeRadar */ = {
 			isa = PBXGroup;
 			children = (
-				4F65FEF02028A72A004F8093 /* 107-02-pokemon.csv */,
+				4F65FEF02028A72A004F8093 /* pokemon.csv */,
 				4F65FEDE2028A699004F8093 /* AppDelegate.swift */,
 				4F65FEE02028A699004F8093 /* ViewController.swift */,
 				4F65FEE22028A699004F8093 /* Main.storyboard */,
@@ -90,6 +96,9 @@
 				4F65FEE72028A699004F8093 /* LaunchScreen.storyboard */,
 				4F65FEEA2028A699004F8093 /* Info.plist */,
 				4F65FEF22028AD6D004F8093 /* GoogleService-Info.plist */,
+				4F60AF5E2029F4B100074CAF /* Pokemon.swift */,
+				4F60AF602029F90E00074CAF /* PokemonFactory.swift */,
+				4F60AF62202A015800074CAF /* PokemonAnnotation.swift */,
 			);
 			path = PokeRadar;
 			sourceTree = "<group>";
@@ -157,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F65FEE92028A699004F8093 /* LaunchScreen.storyboard in Resources */,
-				4F65FEF12028A72A004F8093 /* 107-02-pokemon.csv in Resources */,
+				4F65FEF12028A72A004F8093 /* pokemon.csv in Resources */,
 				4F65FEF32028AD6E004F8093 /* GoogleService-Info.plist in Resources */,
 				4F65FEE62028A699004F8093 /* Assets.xcassets in Resources */,
 				4F65FEE42028A699004F8093 /* Main.storyboard in Resources */,
@@ -231,8 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F60AF612029F90E00074CAF /* PokemonFactory.swift in Sources */,
 				4F65FEE12028A699004F8093 /* ViewController.swift in Sources */,
 				4F65FEDF2028A699004F8093 /* AppDelegate.swift in Sources */,
+				4F60AF63202A015800074CAF /* PokemonAnnotation.swift in Sources */,
+				4F60AF5F2029F4B100074CAF /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
