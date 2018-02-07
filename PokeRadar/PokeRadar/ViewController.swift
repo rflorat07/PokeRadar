@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         
         self.locationManager.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(notify), name: NSNotification.Name(rawValue: "NotifyPokemon"), object: nil)
+        
         locationAuthStatus()
     }
     
@@ -57,12 +59,22 @@ class ViewController: UIViewController {
         })
     }
     
-    @IBAction func reportPokemon(_ sender: Any) {
+  /*  @IBAction func reportPokemon(_ sender: Any) {
         
         let location = CLLocation(latitude: self.mapView.centerCoordinate.latitude, longitude: self.mapView.centerCoordinate.longitude)
         let pokemonIdRand = arc4random_uniform(151) + 1
         
         self.createSighting(forLocation: location, with: Int(pokemonIdRand))
+    } */
+    
+    @objc func notify(notif: Notification) {
+        if let pokemon = notif.object as? Pokemon {
+            
+            let location = CLLocation(latitude: self.mapView.centerCoordinate.latitude, longitude: self.mapView.centerCoordinate.longitude)
+            
+            self.createSighting(forLocation: location, with: pokemon.id)
+            
+        }
     }
     
     
