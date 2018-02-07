@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: MKMapViewDelegate{
+extension ViewController: MKMapViewDelegate {
     
     func centerMap(on location: CLLocation) {
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
@@ -122,6 +122,26 @@ extension ViewController: MKMapViewDelegate{
         }
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        if let annotation = view.annotation as? PokemonAnnotation {
+            
+            let place = MKPlacemark(coordinate: annotation.coordinate)
+            let destination = MKMapItem(placemark: place)
+            
+            destination.name = "Pokemon avistado"
+            
+            let distance : CLLocationDistance = 1000
+            let span = MKCoordinateRegionMakeWithDistance(annotation.coordinate, distance, distance)
+            
+            let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: span.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: span.span), MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String : Any]
+            
+            MKMapItem.openMaps(with: [destination], launchOptions: options)
+            
+        }
+        
     }
     
 }
